@@ -37,8 +37,8 @@ const RadarControllerWorkstation = () => {
       id: 'TRK-001',
       callsign: 'VIPER-03',
       type: 'F-16C',
-      position: { x: 280, y: 180, range: 85, bearing: 078, elevation: 25000 },
-      vector: { dx: -12, dy: 8, speed: 420, heading: 078 },
+      position: { x: 280, y: 180, range: 85, bearing: 78, elevation: 25000 },
+      vector: { dx: -12, dy: 8, speed: 420, heading: 78 },
       radarData: {
         primaryReturn: true,
         secondaryReturn: true,
@@ -60,7 +60,7 @@ const RadarControllerWorkstation = () => {
       callsign: 'UNKNOWN',
       type: 'FAST MOVER',
       position: { x: 180, y: 220, range: 125, bearing: 135, elevation: 32000 },
-      vector: { dx: 18, dy: 12, speed: 540, heading: 045 },
+      vector: { dx: 18, dy: 12, speed: 540, heading: 45 },
       radarData: {
         primaryReturn: true,
         secondaryReturn: false,
@@ -103,8 +103,8 @@ const RadarControllerWorkstation = () => {
       id: 'TRK-004',
       callsign: 'STEALTH-X',
       type: 'LOW OBSERVABLE',
-      position: { x: 200, y: 120, range: 145, bearing: 025, elevation: 35000 },
-      vector: { dx: 15, dy: 20, speed: 480, heading: 065 },
+      position: { x: 200, y: 120, range: 145, bearing: 25, elevation: 35000 },
+      vector: { dx: 15, dy: 20, speed: 480, heading: 65 },
       radarData: {
         primaryReturn: false,
         secondaryReturn: false,
