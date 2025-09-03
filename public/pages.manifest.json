@@ -1,0 +1,51 @@
+[
+  {
+    "id": "rokaf-data-analyst-workstation",
+    "route": "/samples/rokaf-data-analyst-workstation",
+    "title": "ROKAF Data Analyst Workstation",
+    "summary": "An interactive demonstration of the ROKAF Data Analyst Workstation interface.",
+    "tags": []
+  },
+  {
+    "id": "rokaf-flight-controller-workstation",
+    "route": "/samples/rokaf-flight-controller-workstation",
+    "title": "ROKAF Flight Controller Workstation",
+    "summary": "An interactive demonstration of the ROKAF Flight Controller Workstation interface.",
+    "tags": []
+  },
+  {
+    "id": "rokaf-mcrc-advanced-v2",
+    "route": "/samples/rokaf-mcrc-advanced-v2",
+    "title": "ROKAF Mcrc Advanced V2",
+    "summary": "An interactive demonstration of the ROKAF Mcrc Advanced V2 interface.",
+    "tags": []
+  },
+  {
+    "id": "rokaf-mcrc-ai-system",
+    "route": "/samples/rokaf-mcrc-ai-system",
+    "title": "ROKAF Mcrc AI System",
+    "summary": "An interactive demonstration of the ROKAF Mcrc AI System interface.",
+    "tags": []
+  },
+  {
+    "id": "rokaf-mcrc-east-asia",
+    "route": "/samples/rokaf-mcrc-east-asia",
+    "title": "ROKAF Mcrc East Asia",
+    "summary": "An interactive demonstration of the ROKAF Mcrc East Asia interface.",
+    "tags": []
+  },
+  {
+    "id": "rokaf-radar-controller-workstation",
+    "route": "/samples/rokaf-radar-controller-workstation",
+    "title": "ROKAF Radar Controller Workstation",
+    "summary": "An interactive demonstration of the ROKAF Radar Controller Workstation interface.",
+    "tags": []
+  },
+  {
+    "id": "rokaf-sector-ke14-operations",
+    "route": "/samples/rokaf-sector-ke14-operations",
+    "title": "ROKAF Sector Ke14 Operations",
+    "summary": "An interactive demonstration of the ROKAF Sector Ke14 Operations interface.",
+    "tags": []
+  }
+]
