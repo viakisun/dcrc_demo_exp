@@ -44,8 +44,8 @@ const FlightControllerWorkstation = () => {
       navigation: {
         currentAlt: 25000,
         assignedAlt: 25000,
-        currentHdg: 078,
-        assignedHdg: 085,
+        currentHdg: 78,
+        assignedHdg: 85,
         currentSpd: 420,
         assignedSpd: 420,
         verticalRate: 0,

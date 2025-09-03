@@ -43,7 +43,7 @@ const DataAnalystWorkstation = () => {
       characteristics: {
         speed: 540,
         altitude: 32000,
-        heading: 045,
+        heading: 45,
         rcs: 0.8,
         emissionPattern: 'MILITARY_RADAR',
         flightProfile: 'INTERCEPT_VECTOR'
@@ -76,7 +76,7 @@ const DataAnalystWorkstation = () => {
       characteristics: {
         speed: 480,
         altitude: 35000,
-        heading: 065,
+        heading: 65,
         rcs: 0.001,
         emissionPattern: 'LOW_PROBABILITY_INTERCEPT',
         flightProfile: 'PENETRATION_CORRIDOR'

@@ -2,8 +2,9 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
+import type { SampleSlug } from '@/lib/types';
 
-const components = {
+const components: Record<SampleSlug, React.ComponentType> = {
   'rokaf-data-analyst-workstation': dynamic(() => import('@/samples/rokaf-data-analyst-workstation.tsx')),
   'rokaf-flight-controller-workstation': dynamic(() => import('@/samples/rokaf-flight-controller-workstation.tsx')),
   'rokaf-mcrc-advanced-v2': dynamic(() => import('@/samples/rokaf-mcrc-advanced-v2.tsx')),
@@ -12,8 +13,6 @@ const components = {
   'rokaf-radar-controller-workstation': dynamic(() => import('@/samples/rokaf-radar-controller-workstation.tsx')),
   'rokaf-sector-ke14-operations': dynamic(() => import('@/samples/rokaf-sector-ke14-operations.tsx')),
 };
-
-type SampleSlug = keyof typeof components;
 
 export function SampleViewer({ slug }: { slug: SampleSlug }) {
   const Component = components[slug];
