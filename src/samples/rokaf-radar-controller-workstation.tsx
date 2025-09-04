@@ -6,9 +6,32 @@ import {
   Gauge, Filter
 } from 'lucide-react';
 
+interface RadarTrack {
+  id: string;
+  callsign: string;
+  type: string;
+  position: { x: number; y: number; range: number; bearing: number; elevation: number; };
+  vector: { dx: number; dy: number; speed: number; heading: number; };
+  radarData: {
+    primaryReturn: boolean;
+    secondaryReturn: boolean;
+    signalStrength: number;
+    rcs: number;
+    squawk: string;
+    mode: string;
+    iff: string;
+    doppler: number;
+    snr: number;
+  };
+  classification: string;
+  trackQuality: string;
+  lastDetection: string;
+  radarSource: string[];
+}
+
 const RadarControllerWorkstation = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [selectedTrack, setSelectedTrack] = useState(null);
+  const [selectedTrack, setSelectedTrack] = useState<RadarTrack | null>(null);
   const [radarMode, setRadarMode] = useState('SEARCH');
   const [radarRange, setRadarRange] = useState(100);
   const [radarSweep, setRadarSweep] = useState(0);
