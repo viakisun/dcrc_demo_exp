@@ -1,18 +1,11 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { SampleCard } from './sample-card'; // Placeholder for the card component
-
-interface PageManifest {
-  id: string;
-  route: string;
-  title: string;
-  summary: string;
-  tags: string[];
-}
+import { SampleCard } from './sample-card';
+import type { SampleData } from '@/app/page';
 
 interface DashboardContainerProps {
-  samples: PageManifest[];
+  samples: SampleData[];
 }
 
 export function DashboardContainer({ samples }: DashboardContainerProps) {
