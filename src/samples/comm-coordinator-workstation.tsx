@@ -423,7 +423,7 @@ const CommCoordinatorWorkstation = () => {
 
       {/* 하단 분류 표시 */}
       <div className="bg-red-900 text-white text-center py-1 font-bold text-xs">
-        ★★ TOP SECRET // REL TO ROKAF // COMM COORDINATOR WORKSTATION ★★
+        ★★ TOP SECRET // REL TO ROK // COMM COORDINATOR WORKSTATION ★★
       </div>
     </div>
   );

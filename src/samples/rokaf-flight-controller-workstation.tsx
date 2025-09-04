@@ -445,7 +445,7 @@ const FlightControllerWorkstation = () => {
     <div className="min-h-screen bg-gray-900 text-green-300 font-mono">
       {/* 헤더 */}
       <div className="bg-red-900 text-white text-center py-1 font-bold text-xs">
-        ★★ TOP SECRET // REL TO ROKAF // FLIGHT CONTROLLER WORKSTATION ★★
+        ★★ TOP SECRET // REL TO ROK // FLIGHT CONTROLLER WORKSTATION ★★
       </div>
 
       {/* 워크스테이션 헤더 */}
@@ -827,7 +827,7 @@ const FlightControllerWorkstation = () => {
 
       {/* 하단 분류 표시 */}
       <div className="bg-red-900 text-white text-center py-1 font-bold text-xs">
-        ★★ TOP SECRET // REL TO ROKAF // FLIGHT CONTROLLER WORKSTATION ★★
+        ★★ TOP SECRET // REL TO ROK // FLIGHT CONTROLLER WORKSTATION ★★
       </div>
     </div>
   );

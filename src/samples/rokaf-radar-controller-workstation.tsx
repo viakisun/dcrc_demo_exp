@@ -355,7 +355,7 @@ const RadarControllerWorkstation = () => {
     <div className="min-h-screen bg-gray-900 text-green-300 font-mono">
       {/* 헤더 */}
       <div className="bg-red-900 text-white text-center py-1 font-bold text-xs">
-        ★★ TOP SECRET // REL TO ROKAF // RADAR CONTROLLER WORKSTATION ★★
+        ★★ TOP SECRET // REL TO ROK // RADAR CONTROLLER WORKSTATION ★★
       </div>
 
       {/* 워크스테이션 헤더 */}
@@ -723,7 +723,7 @@ const RadarControllerWorkstation = () => {
 
       {/* 하단 분류 표시 */}
       <div className="bg-red-900 text-white text-center py-1 font-bold text-xs">
-        ★★ TOP SECRET // REL TO ROKAF // RADAR CONTROLLER WORKSTATION ★★
+        ★★ TOP SECRET // REL TO ROK // RADAR CONTROLLER WORKSTATION ★★
       </div>
     </div>
   );
