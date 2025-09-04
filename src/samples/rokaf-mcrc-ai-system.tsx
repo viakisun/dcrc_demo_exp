@@ -262,7 +262,7 @@ const ROKAFMCRCAISystem = () => {
     <div className="min-h-screen bg-gray-900 text-green-300 font-mono">
       {/* TOP SECRET 헤더 */}
       <div className="bg-red-900 text-white text-center py-1 font-bold text-xs">
-        ★★ TOP SECRET // AI CLASSIFIED // REL TO ROKAF ★★
+        ★★ TOP SECRET // AI CLASSIFIED // REL TO ROK ★★
       </div>
 
       {/* AI 강화 메인 헤더 */}
@@ -273,7 +273,7 @@ const ROKAFMCRCAISystem = () => {
               <Brain className="w-8 h-8 text-purple-200" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-purple-300">ROKAF MCRC-AI</h1>
+              <h1 className="text-2xl font-bold text-purple-300">ROK MCRC-AI</h1>
               <p className="text-sm text-purple-500">AI-Integrated Master Control and Reporting Center</p>
             </div>
             <div className="flex space-x-2">
@@ -722,7 +722,7 @@ const ROKAFMCRCAISystem = () => {
 
       {/* 하단 분류 표시 */}
       <div className="bg-red-900 text-white text-center py-1 font-bold text-xs">
-        ★★ TOP SECRET // AI CLASSIFIED // REL TO ROKAF ★★
+        ★★ TOP SECRET // AI CLASSIFIED // REL TO ROK ★★
       </div>
     </div>
   );

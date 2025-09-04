@@ -221,7 +221,7 @@ const ROKAFMCRCSystem = () => {
     <div className="min-h-screen bg-gray-900 text-green-300 font-mono">
       {/* TOP SECRET 헤더 */}
       <div className="bg-red-900 text-white text-center py-1 font-bold text-xs">
-        ★★ TOP SECRET // REL TO ROKAF ★★
+        ★★ TOP SECRET // REL TO ROK ★★
       </div>
 
       {/* 메인 헤더 */}
@@ -232,7 +232,7 @@ const ROKAFMCRCSystem = () => {
               <Radar className="w-6 h-6 text-green-200" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-green-300">ROKAF MCRC</h1>
+              <h1 className="text-xl font-bold text-green-300">ROK MCRC</h1>
               <p className="text-xs text-green-500">Master Control and Reporting Center</p>
             </div>
           </div>
@@ -549,7 +549,7 @@ const ROKAFMCRCSystem = () => {
 
       {/* 하단 분류 표시 */}
       <div className="bg-red-900 text-white text-center py-1 font-bold text-xs">
-        ★★ TOP SECRET // REL TO ROKAF ★★
+        ★★ TOP SECRET // REL TO ROK ★★
       </div>
     </div>
   );

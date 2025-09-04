@@ -8,7 +8,7 @@ function formatTitle(id) {
   return id
     .split('-')
     .map(word => {
-      if (word.toUpperCase() === 'ROKAF') return 'ROKAF';
+      if (word.toUpperCase() === 'ROKAF') return 'ROK';
       if (word.toUpperCase() === 'AI') return 'AI';
       return word.charAt(0).toUpperCase() + word.slice(1);
     })
