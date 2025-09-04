@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Brain, Bot, TrendingUp, Cpu, Network,
-  AlertCircle
+  AlertCircle, BarChart3
 } from 'lucide-react';
 
 const ROKAFMCRCAISystem = () => {
