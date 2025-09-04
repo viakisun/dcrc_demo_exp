@@ -6,9 +6,42 @@ import {
   Microscope
 } from 'lucide-react';
 
+interface Threat {
+  id: string;
+  classification: string;
+  confidence: number;
+  riskLevel: string;
+  characteristics: {
+    speed: number;
+    altitude: number;
+    heading: number;
+    rcs: number;
+    emissionPattern: string;
+    flightProfile: string;
+  };
+  aiAssessment: {
+    aircraftType: string;
+    probability: number;
+    intent: string;
+    threatWindow: string;
+    recommendedAction: string;
+  };
+  correlatedData: {
+    sigint: string;
+    elint: string;
+    humint: string;
+    osint: string;
+  };
+  timeline: {
+    time: string;
+    event: string;
+    source: string;
+  }[];
+}
+
 const DataAnalystWorkstation = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [selectedThreat, setSelectedThreat] = useState(null);
+  const [selectedThreat, setSelectedThreat] = useState<Threat | null>(null);
   const [analysisMode, setAnalysisMode] = useState('REALTIME');
   const [aiProcessing, setAiProcessing] = useState(false);
   const [confidenceLevel, setConfidenceLevel] = useState(87);

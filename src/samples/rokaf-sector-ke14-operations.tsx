@@ -8,11 +8,30 @@ import {
   Crosshair
 } from 'lucide-react';
 
+interface SectorTrack {
+  id: string;
+  callsign: string;
+  type: string;
+  position: { x: number; y: number };
+  vector: { dx: number; dy: number };
+  altitude: number;
+  speed: number;
+  heading: number;
+  status: string;
+  mission: string;
+  fuel: number | string;
+  controller: string;
+  pilot: string;
+  commsFreq: string;
+  squawk: string;
+  lastContact: string;
+}
+
 const ROKAFSectorKE14Detail = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [selectedOperator, setSelectedOperator] = useState('OPS-01');
   const [alertStatus, setAlertStatus] = useState('GREEN');
-  const [selectedTrack, setSelectedTrack] = useState(null);
+  const [selectedTrack, setSelectedTrack] = useState<SectorTrack | null>(null);
 
   // 섹터 KE-14 담당 운영진
   const operatorStations = [

@@ -9,9 +9,52 @@ import {
   Navigation2, ArrowUp, ArrowDown, ArrowLeft, ArrowRight
 } from 'lucide-react';
 
+interface Aircraft {
+  id: string;
+  callsign: string;
+  type: string;
+  position: { x: number; y: number };
+  vector: { dx: number; dy: number };
+  flightPlan: {
+    departure: string;
+    destination: string;
+    route: string;
+    currentWaypoint: string;
+    nextWaypoint: string;
+    eta: string;
+    fuel: number;
+  };
+  navigation: {
+    currentAlt: number;
+    assignedAlt: number;
+    currentHdg: number;
+    assignedHdg: number;
+    currentSpd: number;
+    assignedSpd: number;
+    verticalRate: number;
+    turnRate: number;
+  };
+  communications: {
+    frequency: string;
+    lastContact: string;
+    contactQuality: string;
+    responseTime: string;
+    pilot: string;
+  };
+  status: string;
+  clearanceLevel: string;
+  priority: string;
+  separation: {
+    nearest: string;
+    distance: number;
+    verticalSep: number;
+    conflictLevel: string;
+  };
+}
+
 const FlightControllerWorkstation = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [selectedAircraft, setSelectedAircraft] = useState(null);
+  const [selectedAircraft, setSelectedAircraft] = useState<Aircraft | null>(null);
   const [vectorMode, setVectorMode] = useState('MANUAL');
   const [selectedFreq, setSelectedFreq] = useState('251.75');
   const [transmitting, setTransmitting] = useState(false);

@@ -4,9 +4,31 @@ import {
   AlertCircle, BarChart3
 } from 'lucide-react';
 
+interface Track {
+  id: string;
+  callsign: string;
+  type: string;
+  mission: string;
+  position: { x: number; y: number };
+  vector: { dx: number; dy: number };
+  speed: number;
+  altitude: number;
+  status: string;
+  controller: string;
+  fuel: number | string;
+  weapons: string;
+  pilot: string;
+  eta: string;
+  aiClassification: string;
+  aiConfidence: number;
+  predictedPath: string;
+  threatLevel: number;
+  aiRecommendation: string;
+}
+
 const ROKAFMCRCAISystem = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [, setSelectedTrack] = useState(null);
+  const [, setSelectedTrack] = useState<Track | null>(null);
   const [threatLevel] = useState('FPCON-BRAVO');
   const [aiMode, setAiMode] = useState('ACTIVE');
   const [aiConfidence, setAiConfidence] = useState(94);
