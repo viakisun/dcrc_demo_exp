@@ -47,5 +47,12 @@
     "title": "ROKAF Sector Ke14 Operations",
     "summary": "An interactive demonstration of the ROKAF Sector Ke14 Operations interface.",
     "tags": []
+  },
+  {
+    "id": "comm-coordinator-workstation",
+    "route": "/samples/comm-coordinator-workstation",
+    "title": "Comm Coordinator Workstation",
+    "summary": "An interactive demonstration of the Comm Coordinator Workstation interface.",
+    "tags": []
   }
 ]
