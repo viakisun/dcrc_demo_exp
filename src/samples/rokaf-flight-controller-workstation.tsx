@@ -265,7 +265,7 @@ const FlightControllerWorkstation = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const handleVectorCommand = (aircraft, command) => {
+  const handleVectorCommand = (aircraft: Aircraft, command: string) => {
     const newComm = {
       time: new Date(),
       from: 'FC',
