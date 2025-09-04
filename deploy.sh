@@ -29,10 +29,10 @@ echo "Building Next.js application..."
 npm run build
 
 # 5. PM2: Reload the application
-# PM2 will handle stopping the old process and starting the new one with zero downtime.
-# If the app isn't running, it will start it.
+# Tries to restart the app if it's already running. If not, it starts it.
+# The '--' is important to separate arguments for pm2 from arguments for the npm script.
 echo "Restarting application '$APP_NAME' with PM2..."
-pm2 startOrRestart npm --name "$APP_NAME" -- start
+pm2 restart "$APP_NAME" || pm2 start npm --name "$APP_NAME" -- -- start
 
 echo "---"
 echo "Deployment successful!"
