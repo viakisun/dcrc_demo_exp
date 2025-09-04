@@ -159,6 +159,7 @@ const DataAnalystWorkstation = () => {
         
         // 데이터 스트림 업데이트
         setDataStreams(prev => ({
+          ...prev,
           radar: { ...prev.radar, rate: prev.radar.rate + Math.floor(Math.random() * 20 - 10) },
           sigint: { ...prev.sigint, rate: prev.sigint.rate + Math.floor(Math.random() * 15 - 7) },
           elint: { ...prev.elint, rate: prev.elint.rate + Math.floor(Math.random() * 10 - 5) }
