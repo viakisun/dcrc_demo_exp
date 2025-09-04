@@ -8,6 +8,6 @@ export function generateStaticParams() {
   }));
 }
 
-export default function SamplePage({ params }: { params: { slug: SampleSlug } }) {
+export default async function SamplePage({ params }: { params: { slug: SampleSlug } }) {
   return <SampleViewer slug={params.slug} />;
 }

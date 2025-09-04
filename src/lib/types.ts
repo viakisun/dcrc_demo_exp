@@ -6,6 +6,7 @@ export const sampleSlugs = [
   'rokaf-mcrc-east-asia',
   'rokaf-radar-controller-workstation',
   'rokaf-sector-ke14-operations',
+  'comm-coordinator-workstation',
 ] as const;
 
 export type SampleSlug = typeof sampleSlugs[number];
