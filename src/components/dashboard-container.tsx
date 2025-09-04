@@ -2,10 +2,17 @@
 
 import React, { useState, useMemo } from 'react';
 import { SampleCard } from './sample-card';
-import type { SampleData } from '@/app/page';
+
+export interface PageManifest {
+  id: string;
+  route: string;
+  title: string;
+  summary: string;
+  tags: string[];
+}
 
 interface DashboardContainerProps {
-  samples: SampleData[];
+  samples: PageManifest[];
 }
 
 export function DashboardContainer({ samples }: DashboardContainerProps) {
