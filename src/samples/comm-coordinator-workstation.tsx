@@ -129,8 +129,8 @@ const CommCoordinatorWorkstation = () => {
     channelsStandby: 3
   };
 
-  const getStatusColor = (status) => {
-    const colors = {
+  const getStatusColor = (status: string) => {
+    const colors: Record<string, string> = {
       'ACTIVE': 'text-green-400',
       'ONLINE': 'text-green-400', 
       'SECURE': 'text-blue-400',
@@ -152,8 +152,8 @@ const CommCoordinatorWorkstation = () => {
     return colors[status] || 'text-gray-400';
   };
 
-  const getTrafficColor = (traffic) => {
-    const colors = {
+  const getTrafficColor = (traffic: string) => {
+    const colors: Record<string, string> = {
       'HIGH': 'text-red-400',
       'URGENT': 'text-orange-400', 
       'MEDIUM': 'text-yellow-400',
@@ -166,8 +166,8 @@ const CommCoordinatorWorkstation = () => {
     return colors[traffic] || 'text-gray-400';
   };
 
-  const getPriorityColor = (priority) => {
-    const colors = {
+  const getPriorityColor = (priority: string) => {
+    const colors: Record<string, string> = {
       'EMERGENCY': 'text-red-500 font-bold',
       'CRITICAL': 'text-red-400 font-bold',
       'URGENT': 'text-orange-400',
