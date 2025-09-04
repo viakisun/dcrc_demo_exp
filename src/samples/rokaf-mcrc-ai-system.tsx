@@ -28,7 +28,7 @@ interface Track {
 
 const ROKAFMCRCAISystem = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [, setSelectedTrack] = useState<Track | null>(null);
+  const [selectedTrack, setSelectedTrack] = useState<Track | null>(null);
   const [threatLevel] = useState('FPCON-BRAVO');
   const [aiMode, setAiMode] = useState('ACTIVE');
   const [aiConfidence, setAiConfidence] = useState(94);
@@ -136,8 +136,8 @@ const ROKAFMCRCAISystem = () => {
     }
   ];
 
-  const renderAITrack = (track) => {
-    const colors = {
+  const renderAITrack = (track: Track) => {
+    const statusColors: Record<Track['status'], string> = {
       'FRIENDLY': track.aiClassification === 'FULL_AI_CONTROL' ? 'text-purple-400 bg-purple-900/30 border-purple-400' : 'text-green-400 bg-green-900/30 border-green-400',
       'UNKNOWN': 'text-yellow-400 bg-yellow-900/30 border-yellow-400',
       'HOSTILE': 'text-red-400 bg-red-900/30 border-red-400'
@@ -182,7 +182,7 @@ const ROKAFMCRCAISystem = () => {
 
         {/* 메인 트랙 표시 (AI 강화) */}
         <div 
-          className={`absolute ${colors[track.status]} border-2 rounded-lg p-1.5 text-[10px] font-mono transform -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:bg-opacity-80 transition-all shadow-lg`}
+          className={`absolute ${statusColors[track.status]} border-2 rounded-lg p-1.5 text-[10px] font-mono transform -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:bg-opacity-80 transition-all shadow-lg`}
           style={{ 
             left: `${track.position.x}px`, 
             top: `${track.position.y}px`

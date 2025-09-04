@@ -6,10 +6,25 @@ import {
   Plane, CloudRain
 } from 'lucide-react';
 
+type TrackStatus = 'FRIENDLY' | 'UNKNOWN' | 'POTENTIAL_THREAT';
+
+interface Track {
+  id: string;
+  callsign: string;
+  type: string;
+  mission: string;
+  position: { x: number; y: number };
+  vector: { dx: number; dy: number };
+  speed: number;
+  altitude: number;
+  status: TrackStatus;
+  controller: string;
+}
+
 const ROKAFMCRCSystem = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [selectedGrid, setSelectedGrid] = useState('KE-12');
-  const [selectedTrack, setSelectedTrack] = useState(null);
+  const [selectedTrack, setSelectedTrack] = useState<Track | null>(null);
   const [threatLevel] = useState('DEFCON-3');
 
   useEffect(() => {
@@ -33,7 +48,7 @@ const ROKAFMCRCSystem = () => {
   ];
 
   // 실시간 항공기/드론 추적 (실제 비행번호 체계)
-  const activeTracks = [
+  const activeTracks: Track[] = [
     { 
       id: 'KAF001', 
       callsign: 'ROKAF-001', 
@@ -108,8 +123,8 @@ const ROKAFMCRCSystem = () => {
     }
   ];
 
-  const renderTrack = (track) => {
-    const colors = {
+  const renderTrack = (track: Track) => {
+    const colors: Record<TrackStatus, string> = {
       'FRIENDLY': 'text-green-400 bg-green-900/30 border-green-400',
       'UNKNOWN': 'text-yellow-400 bg-yellow-900/30 border-yellow-400',
       'POTENTIAL_THREAT': 'text-red-400 bg-red-900/30 border-red-400'
