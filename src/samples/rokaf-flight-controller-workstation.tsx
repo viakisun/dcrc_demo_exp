@@ -62,7 +62,7 @@ const FlightControllerWorkstation = () => {
   const [routeDisplay, setRouteDisplay] = useState('ALL');
 
   // 관제 중인 항공기들 (Flight Controller 전담)
-  const controlledAircraft = [
+  const controlledAircraft: Aircraft[] = [
     {
       id: 'FC-001',
       callsign: 'VIPER-03',
@@ -234,7 +234,22 @@ const FlightControllerWorkstation = () => {
   ];
 
   // 항로 및 웨이포인트
-  const airwaysAndWaypoints = [
+  interface Airway {
+    id: string;
+    type: 'AIRWAY';
+    path: { x: number; y: number }[];
+    color: string;
+  }
+
+  interface Waypoint {
+    id: string;
+    type: 'WAYPOINT';
+    position: { x: number; y: number };
+    name: string;
+    path?: undefined; // Ensure path does not exist on Waypoint
+  }
+
+  const airwaysAndWaypoints: (Airway | Waypoint)[] = [
     { id: 'ALPHA-1', type: 'AIRWAY', path: [{x: 100, y: 150}, {x: 200, y: 160}, {x: 300, y: 170}], color: '#60a5fa' },
     { id: 'BRAVO-2', type: 'WAYPOINT', position: {x: 200, y: 160}, name: 'BRAVO-2' },
     { id: 'CHARLIE-3', type: 'WAYPOINT', position: {x: 300, y: 170}, name: 'CHARLIE-3' },
@@ -293,25 +308,27 @@ const FlightControllerWorkstation = () => {
           <rect width="100%" height="100%" fill="url(#navGrid)" />
           
           {/* 항공로 표시 */}
-          {airwaysAndWaypoints.filter(item => item.type === 'AIRWAY').map(airway => (
+          {airwaysAndWaypoints.filter(item => item.type === 'AIRWAY').map(airway => {
+            if (!airway.path) return null;
+            return (
             <g key={airway.id}>
               <path
                 d={`M ${airway.path.map(p => `${p.x} ${p.y}`).join(' L ')}`}
-                stroke={airway.color}
+                stroke={(airway as Airway).color}
                 strokeWidth="2"
                 strokeDasharray="5,5"
                 fill="none"
               />
               <text x={airway.path[Math.floor(airway.path.length/2)].x} y={airway.path[Math.floor(airway.path.length/2)].y - 10} 
-                    fill={airway.color} fontSize="10" textAnchor="middle">{airway.id}</text>
+                    fill={(airway as Airway).color} fontSize="10" textAnchor="middle">{airway.id}</text>
             </g>
-          ))}
+          )})}
           
           {/* 웨이포인트 표시 */}
           {airwaysAndWaypoints.filter(item => item.type === 'WAYPOINT').map(waypoint => (
             <g key={waypoint.id}>
-              <circle cx={waypoint.position.x} cy={waypoint.position.y} r="4" fill="#fbbf24" stroke="#f59e0b" strokeWidth="2" />
-              <text x={waypoint.position.x} y={waypoint.position.y - 15} fill="#fbbf24" fontSize="9" textAnchor="middle" fontWeight="bold">{waypoint.name}</text>
+              <circle cx={(waypoint as Waypoint).position.x} cy={(waypoint as Waypoint).position.y} r="4" fill="#fbbf24" stroke="#f59e0b" strokeWidth="2" />
+              <text x={(waypoint as Waypoint).position.x} y={(waypoint as Waypoint).position.y - 15} fill="#fbbf24" fontSize="9" textAnchor="middle" fontWeight="bold">{waypoint.name}</text>
             </g>
           ))}
           
