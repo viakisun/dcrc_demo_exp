@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Shield, Target, Navigation, Radar, Radio, Satellite,
-  AlertTriangle, CheckCircle, XCircle, Clock, Battery,
-  Eye, Camera, Crosshair, Map, Globe, Zap, Activity,
-  Users, Settings, Bell, Download, Upload, RefreshCw,
-  Plane, Wind, Thermometer, CloudRain, Sun, Moon,
-  Lock, Unlock, Key, FileText, Headphones, Mic,
-  Flame, Skull, Minus, Plus, Maximize, Minimize
+  Target, Radar, Radio,
+  Crosshair, Zap, Activity,
+  Settings,
+  Plane, CloudRain,
+  Flame, Skull
 } from 'lucide-react';
 
 const ROKAFMCRCAdvanced = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [selectedGrid, setSelectedGrid] = useState('KE-12');
   const [selectedTrack, setSelectedTrack] = useState(null);
-  const [threatLevel, setThreatLevel] = useState('FPCON-BRAVO');
+  const [threatLevel] = useState('FPCON-BRAVO');
   const [radarMode, setRadarMode] = useState('WIDE_AREA');
   const [showTrails, setShowTrails] = useState(true);
   const [alertLevel, setAlertLevel] = useState('NORMAL');

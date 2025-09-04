@@ -69,16 +69,14 @@ async function getWorkstationDetails(slug: SampleSlug) {
   }
 }
 
-export default async function AboutPage({ params }: { params: { slug: SampleSlug } }) {
-  const { slug } = params;
+export default async function AboutPage(props: { params: Promise<{ slug: SampleSlug }> }) {
+  const { slug } = await props.params;
   const details = await getWorkstationDetails(slug);
 
   if (!details) {
     notFound();
   }
 
-  // Extract title from the first line of details
-  const title = details.split('\n')[0].replace('## ', '').replace(/\*\*/g, '');
   const sampleRoute = `/samples/${slug}`;
 
   return (

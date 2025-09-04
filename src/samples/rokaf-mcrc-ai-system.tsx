@@ -1,21 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Shield, Target, Navigation, Radar, Radio, Satellite,
-  AlertTriangle, CheckCircle, XCircle, Clock, Battery,
-  Eye, Camera, Crosshair, Map, Globe, Zap, Activity,
-  Users, Settings, Bell, Download, Upload, RefreshCw,
-  Plane, Wind, Thermometer, CloudRain, Sun, Moon,
-  Lock, Unlock, Key, FileText, Headphones, Mic,
-  Flame, Skull, Minus, Plus, Maximize, Minimize,
-  Brain, Bot, TrendingUp, BarChart3, Cpu, Network,
-  AlertCircle, PlayCircle, PauseCircle, FastForward
+  Brain, Bot, TrendingUp, Cpu, Network,
+  AlertCircle
 } from 'lucide-react';
 
 const ROKAFMCRCAISystem = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [selectedGrid, setSelectedGrid] = useState('KE-12');
-  const [selectedTrack, setSelectedTrack] = useState(null);
-  const [threatLevel, setThreatLevel] = useState('FPCON-BRAVO');
+  const [, setSelectedTrack] = useState(null);
+  const [threatLevel] = useState('FPCON-BRAVO');
   const [aiMode, setAiMode] = useState('ACTIVE');
   const [aiConfidence, setAiConfidence] = useState(94);
   const [showPredictions, setShowPredictions] = useState(true);
@@ -23,7 +15,7 @@ const ROKAFMCRCAISystem = () => {
   const [aiAnalyzing, setAiAnalyzing] = useState(false);
 
   // AI 시스템 상태
-  const [aiSystems, setAiSystems] = useState({
+  const [aiSystems] = useState({
     threatAnalysis: { status: 'ACTIVE', confidence: 96, lastUpdate: 'Real-time' },
     patternRecognition: { status: 'LEARNING', confidence: 92, lastUpdate: '2 sec ago' },
     predictiveModeling: { status: 'ACTIVE', confidence: 89, lastUpdate: '1 sec ago' },
@@ -33,7 +25,7 @@ const ROKAFMCRCAISystem = () => {
   });
 
   // AI 탐지 결과 및 예측
-  const [aiAlerts, setAiAlerts] = useState([
+  const [aiAlerts] = useState([
     { id: 1, type: 'THREAT', message: 'AI detected potential hostile formation', confidence: 87, time: new Date(), priority: 'HIGH' },
     { id: 2, type: 'PATTERN', message: 'Unusual flight pattern identified in JE-10', confidence: 92, time: new Date(), priority: 'MEDIUM' },
     { id: 3, type: 'PREDICTION', message: 'Projected intercept point calculated', confidence: 95, time: new Date(), priority: 'HIGH' },
