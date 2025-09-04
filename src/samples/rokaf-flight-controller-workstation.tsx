@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Shield, Target, Navigation, Radar, Radio, Satellite,
-  AlertTriangle, CheckCircle, XCircle, Clock, Battery,
-  Eye, Camera, Crosshair, Map, Globe, Zap, Activity,
-  Users, Settings, Bell, Download, Upload, RefreshCw,
-  Plane, Wind, Thermometer, CloudRain, Sun, Moon,
-  Lock, Unlock, Key, FileText, Headphones, Mic,
-  Flame, Skull, Minus, Plus, Maximize, Minimize,
-  Brain, Bot, TrendingUp, BarChart3, Cpu, Network,
-  AlertCircle, PlayCircle, PauseCircle, FastForward,
-  Volume2, VolumeX, Phone, PhoneCall, MessageSquare,
-  MonitorSpeaker, Layers, MapPin, Route, Signal,
-  Waves, Scan, Gauge, Filter, Move, RotateCcw,
-  Navigation2, Compass, ArrowUp, ArrowDown, ArrowLeft, ArrowRight
+  Target, Navigation, Radio,
+  AlertTriangle,
+  Eye, Zap,
+  Settings,
+  Plane,
+  MessageSquare,
+  Navigation2, ArrowUp, ArrowDown, ArrowLeft, ArrowRight
 } from 'lucide-react';
 
 const FlightControllerWorkstation = () => {

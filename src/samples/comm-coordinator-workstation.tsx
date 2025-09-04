@@ -1,25 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Shield, Target, Navigation, Radar, Radio, Satellite,
-  AlertTriangle, CheckCircle, XCircle, Clock, Battery,
-  Eye, Camera, Crosshair, Map, Globe, Zap, Activity,
-  Users, Settings, Bell, Download, Upload, RefreshCw,
-  Plane, Wind, Thermometer, CloudRain, Sun, Moon,
-  Lock, Unlock, Key, FileText, Headphones, Mic,
-  Flame, Skull, Minus, Plus, Maximize, Minimize,
-  Brain, Bot, TrendingUp, BarChart3, Cpu, Network,
-  AlertCircle, PlayCircle, PauseCircle, FastForward,
-  Volume2, VolumeX, Phone, PhoneCall, MessageSquare,
-  MonitorSpeaker, Layers, MapPin, Route, Signal,
-  Waves, Scan, Gauge, Filter, Database, Search,
-  Speaker, Wifi, WifiOff, Router, Antenna
+  Radio
 } from 'lucide-react';
 
 const CommCoordinatorWorkstation = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [selectedChannel, setSelectedChannel] = useState('251.75');
   const [monitorMode, setMonitorMode] = useState('ALL');
-  const [encryptionLevel, setEncryptionLevel] = useState(95.7);
+  const [encryptionLevel] = useState(95.7);
   const [jamDetection, setJamDetection] = useState(false);
   const [relayMode, setRelayMode] = useState('AUTO');
 
@@ -120,7 +108,7 @@ const CommCoordinatorWorkstation = () => {
   ];
 
   // 실시간 통신 활동
-  const [commActivity, setCommActivity] = useState([
+  const [commActivity] = useState([
     { time: '14:25:43', channel: '251.75', type: 'VOICE', from: 'VIPER-03', to: 'FC', priority: 'ROUTINE', duration: '0:12', content: 'Request vector to waypoint ALPHA' },
     { time: '14:25:31', channel: '255.40', type: 'VOICE', from: 'RESCUE-07', to: 'HOSPITAL', priority: 'URGENT', duration: '0:28', content: 'MEDEVAC inbound ETA 8 minutes' },
     { time: '14:25:18', channel: '311.00', type: 'DATA', from: 'MCRC', to: 'SECTOR CMD', priority: 'HIGH', duration: '0:03', content: 'Threat level update GREEN->YELLOW' },
@@ -230,7 +218,7 @@ const CommCoordinatorWorkstation = () => {
 
           {/* 채널 매트릭스 테이블 */}
           <div className="grid gap-1 max-h-[70vh] overflow-y-auto">
-            {commChannels.map((channel, index) => (
+            {commChannels.map((channel) => (
               <div
                 key={channel.id}
                 onClick={() => setSelectedChannel(channel.frequency)}

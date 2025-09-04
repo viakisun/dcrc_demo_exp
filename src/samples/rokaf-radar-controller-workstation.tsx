@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Shield, Target, Navigation, Radar, Radio, Satellite,
-  AlertTriangle, CheckCircle, XCircle, Clock, Battery,
-  Eye, Camera, Crosshair, Map, Globe, Zap, Activity,
-  Users, Settings, Bell, Download, Upload, RefreshCw,
-  Plane, Wind, Thermometer, CloudRain, Sun, Moon,
-  Lock, Unlock, Key, FileText, Headphones, Mic,
-  Flame, Skull, Minus, Plus, Maximize, Minimize,
-  Brain, Bot, TrendingUp, BarChart3, Cpu, Network,
-  AlertCircle, PlayCircle, PauseCircle, FastForward,
-  Volume2, VolumeX, Phone, PhoneCall, MessageSquare,
-  MonitorSpeaker, Layers, MapPin, Route, Signal,
-  Waves, Scan, Gauge, Filter
+  Target, Radar,
+  Eye, Zap, Activity,
+  Settings,
+  Gauge, Filter
 } from 'lucide-react';
 
 const RadarControllerWorkstation = () => {
@@ -177,7 +169,6 @@ const RadarControllerWorkstation = () => {
   const renderRadarScope = () => {
     const centerX = 300;
     const centerY = 250;
-    const maxRadius = 200;
 
     return (
       <div className="relative w-full h-full bg-gray-950 rounded-lg border-2 border-green-600 overflow-hidden">

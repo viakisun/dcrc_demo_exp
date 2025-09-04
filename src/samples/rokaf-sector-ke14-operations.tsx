@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Shield, Target, Navigation, Radar, Radio, Satellite,
-  AlertTriangle, CheckCircle, XCircle, Clock, Battery,
-  Eye, Camera, Crosshair, Map, Globe, Zap, Activity,
-  Users, Settings, Bell, Download, Upload, RefreshCw,
-  Plane, Wind, Thermometer, CloudRain, Sun, Moon,
-  Lock, Unlock, Key, FileText, Headphones, Mic,
-  Flame, Skull, Minus, Plus, Maximize, Minimize,
-  Brain, Bot, TrendingUp, BarChart3, Cpu, Network,
-  AlertCircle, PlayCircle, PauseCircle, FastForward,
-  Volume2, VolumeX, Phone, PhoneCall, MessageSquare,
-  MonitorSpeaker, Layers, MapPin, Route
+  Target, Radio,
+  AlertTriangle,
+  Users, Settings,
+  BarChart3,
+  MessageSquare,
+  Crosshair
 } from 'lucide-react';
 
 const ROKAFSectorKE14Detail = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [selectedOperator, setSelectedOperator] = useState('OPS-01');
-  const [commsChannel, setCommsChannel] = useState('PRIMARY');
   const [alertStatus, setAlertStatus] = useState('GREEN');
   const [selectedTrack, setSelectedTrack] = useState(null);
 
@@ -179,7 +173,7 @@ const ROKAFSectorKE14Detail = () => {
   ];
 
   // 활성 통신 로그
-  const [commLog, setCommLog] = useState([
+  const [commLog] = useState([
     { time: new Date(), from: 'VIPER-03', to: 'OPS-03', message: 'Request vector to target area Alpha', priority: 'ROUTINE', channel: 'AIR-GROUND' },
     { time: new Date(Date.now() - 30000), from: 'OPS-04', to: 'INTEL-NET', message: 'Unknown track classification request - Squawk 7600', priority: 'PRIORITY', channel: 'DATA-LINK' },
     { time: new Date(Date.now() - 60000), from: 'CARGO-12', to: 'OPS-02', message: 'Requesting flight level change to FL200 due weather', priority: 'ROUTINE', channel: 'AIR-GROUND' },

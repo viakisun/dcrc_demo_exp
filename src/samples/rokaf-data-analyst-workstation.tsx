@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Shield, Target, Navigation, Radar, Radio, Satellite,
-  AlertTriangle, CheckCircle, XCircle, Clock, Battery,
-  Eye, Camera, Crosshair, Map, Globe, Zap, Activity,
-  Users, Settings, Bell, Download, Upload, RefreshCw,
-  Plane, Wind, Thermometer, CloudRain, Sun, Moon,
-  Lock, Unlock, Key, FileText, Headphones, Mic,
-  Flame, Skull, Minus, Plus, Maximize, Minimize,
+  AlertTriangle, Clock,
   Brain, Bot, TrendingUp, BarChart3, Cpu, Network,
-  AlertCircle, PlayCircle, PauseCircle, FastForward,
-  Volume2, VolumeX, Phone, PhoneCall, MessageSquare,
-  MonitorSpeaker, Layers, MapPin, Route, Signal,
-  Waves, Scan, Gauge, Filter, Database, Search,
-  LineChart, PieChart, BarChart, Microscope, Bookmark
+  Filter, Database,
+  Microscope
 } from 'lucide-react';
 
 const DataAnalystWorkstation = () => {
@@ -24,7 +15,7 @@ const DataAnalystWorkstation = () => {
   const [dataSource, setDataSource] = useState('ALL_SENSORS');
 
   // AI 분석 시스템 상태
-  const [aiSystems, setAiSystems] = useState({
+  const [aiSystems] = useState({
     threatAnalysis: { status: 'ACTIVE', confidence: 94, processing: 156 },
     patternRecognition: { status: 'LEARNING', confidence: 89, processing: 73 },
     behaviorAnalysis: { status: 'ACTIVE', confidence: 92, processing: 204 },

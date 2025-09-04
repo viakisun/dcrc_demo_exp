@@ -8,6 +8,7 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function SamplePage({ params }: { params: { slug: SampleSlug } }) {
-  return <SampleViewer slug={params.slug} />;
+export default async function SamplePage(props: { params: Promise<{ slug: SampleSlug }> }) {
+  const { slug } = await props.params;
+  return <SampleViewer slug={slug} />;
 }

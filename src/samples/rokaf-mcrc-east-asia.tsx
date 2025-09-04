@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Shield, Target, Navigation, Radar, Radio, Satellite,
-  AlertTriangle, CheckCircle, XCircle, Clock, Battery,
-  Eye, Camera, Crosshair, Map, Globe, Zap, Activity,
-  Users, Settings, Bell, Download, Upload, RefreshCw,
-  Plane, Wind, Thermometer, CloudRain, Sun, Moon,
-  Lock, Unlock, Key, FileText, Headphones, Mic
+  Shield, Target, Radar, Radio,
+  AlertTriangle,
+  Crosshair, Activity,
+  Plane, CloudRain
 } from 'lucide-react';
 
 const ROKAFMCRCSystem = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [selectedGrid, setSelectedGrid] = useState('KE-12');
   const [selectedTrack, setSelectedTrack] = useState(null);
-  const [threatLevel, setThreatLevel] = useState('DEFCON-3');
+  const [threatLevel] = useState('DEFCON-3');
 
   useEffect(() => {
     const timer = setInterval(() => {

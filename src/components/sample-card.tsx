@@ -27,12 +27,8 @@ export function SampleCard({ sample }: SampleCardProps) {
         </div>
       </div>
       <div className="mt-6">
-        <Link href={aboutRoute}>
-          <div
-            className="block w-full text-center px-4 py-2 bg-green-700 text-white font-bold rounded-md hover:bg-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-400 cursor-pointer"
-          >
-            View Details
-          </div>
+        <Link href={aboutRoute} className="block w-full text-center px-4 py-2 bg-green-700 text-white font-bold rounded-md hover:bg-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-400 cursor-pointer">
+          View Details
         </Link>
       </div>
     </div>
