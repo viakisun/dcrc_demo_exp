@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
 import { RadarTrack } from './types';
 
 interface TrackDetailsProps {

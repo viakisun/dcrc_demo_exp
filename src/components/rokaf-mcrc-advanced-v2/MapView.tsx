@@ -5,12 +5,11 @@ import { Track, GroundThreat, TrackStatus, ThreatStatus } from './types';
 interface MapViewProps {
   tracks: Track[];
   groundThreats: GroundThreat[];
-  selectedTrack: Track | null;
   onSelectTrack: (track: Track) => void;
   showTrails: boolean;
 }
 
-const MapView: React.FC<MapViewProps> = ({ tracks, groundThreats, selectedTrack, onSelectTrack, showTrails }) => {
+const MapView: React.FC<MapViewProps> = ({ tracks, groundThreats, onSelectTrack, showTrails }) => {
   const renderTrack = (track: Track) => {
     const colors: Record<TrackStatus, string> = {
       'FRIENDLY': 'text-green-400 bg-green-900/30 border-green-400',

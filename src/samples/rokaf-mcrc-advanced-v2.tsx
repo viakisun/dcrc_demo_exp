@@ -39,7 +39,6 @@ const ROKAFMCRCAdvancedCore = () => {
           <MapView
             tracks={state.tracks}
             groundThreats={state.groundThreats}
-            selectedTrack={state.selectedTrack}
             onSelectTrack={(track: Track) => dispatch({ type: 'SET_SELECTED_TRACK', payload: track })}
             showTrails={state.showTrails}
           />

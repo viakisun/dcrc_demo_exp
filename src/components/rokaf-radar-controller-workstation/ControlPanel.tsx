@@ -7,10 +7,6 @@ interface ControlPanelProps {
   onRadarModeChange: (mode: string) => void;
   radarRange: number;
   onRadarRangeChange: (range: number) => void;
-  signalFilter: string;
-  onSignalFilterChange: (filter: string) => void;
-  trackingMode: string;
-  onTrackingModeChange: (mode: string) => void;
   radarSystems: RadarSystem[];
   radarPerformance: RadarPerformance;
 }
@@ -18,7 +14,6 @@ interface ControlPanelProps {
 const ControlPanel: React.FC<ControlPanelProps> = (props) => {
   const {
     radarMode, onRadarModeChange, radarRange, onRadarRangeChange,
-    signalFilter, onSignalFilterChange, trackingMode, onTrackingModeChange,
     radarSystems, radarPerformance
   } = props;
 
