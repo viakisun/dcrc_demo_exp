@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useContext, Dispatch } from 'react';
-import { Track } from './types';
+import { Track, GridSector, AISystem, AIAlert } from './types';
 import { activeTracks, gridSectors, aiSystems, aiAlerts } from './constants';
 
 interface State {
@@ -12,9 +12,9 @@ interface State {
   autoResponse: boolean;
   aiAnalyzing: boolean;
   activeTracks: Track[];
-  gridSectors: any[];
-  aiSystems: any;
-  aiAlerts: any[];
+  gridSectors: GridSector[];
+  aiSystems: { [key: string]: AISystem };
+  aiAlerts: AIAlert[];
 }
 
 type Action =
